@@ -1,6 +1,7 @@
 package com.jkgamer2000.blockstuff;
 
 import com.jkgamer2000.blockstuff.handler.ConfigurationHandler;
+import com.jkgamer2000.blockstuff.init.ModBlocks;
 import com.jkgamer2000.blockstuff.proxy.IProxy;
 import com.jkgamer2000.blockstuff.reference.Reference;
 import com.jkgamer2000.blockstuff.utility.LogHelper;
@@ -25,6 +26,8 @@ public class BlockStuff
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModBlocks.init();
 
 
         LogHelper.info("Pre-Initialization Complete");
